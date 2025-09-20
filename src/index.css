@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-serif bg-cover bg-center bg-fixed;
+  background-image: url("/background.jpg"); /* Place background.jpeg in public folder */
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s infinite ease-in-out;
+}
