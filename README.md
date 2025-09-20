@@ -138,18 +138,4 @@ npm start
 
 ---
 
-## 🏷 Suggested Project Names
-
-1. **The Valley Cafe** – cozy, real-life cafe experience
-2. **CafeCraft** – craft your cafe experience interactively
-3. **Brew & Play** – coffee + games in one place
-4. **CafeMixer** – mix drinks, food & fun activities
-5. **Sip & Select** – choose your meals and games
-
----
-
-## 📬 Contact
-
-* **Author:** Sagarika Bhagat
-
-"# Cafe-Experience-Web-App" 
+* **Author:** Sagarika Bhagat 
