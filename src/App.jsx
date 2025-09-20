@@ -5,7 +5,8 @@ import Navbar from "./components/Navbar";
 import ViewMenu from "./components/ViewMenu";
 import Menu from "./pages/Menu";
 import About from "./components/About";
-import Cart from "./components/Create"
+import Cart from "./components/Create";
+import Layout from "../Layout"; 
 
 // Temporary placeholder About & Cart pages
 {/*function Cart() {
@@ -19,6 +20,7 @@ import Cart from "./components/Create"
 export default function App() {
   return (
     <Router>
+      <Layout>
       {/* Top Navbar */}
       <Navbar />
       {/* Left Floating Menu Button */}
@@ -41,6 +43,7 @@ export default function App() {
         {/* Cart Page */}
         <Route path="/cart" element={<Cart />} />
       </Routes>
+      </Layout>
     </Router>
   );
 }
