@@ -134,7 +134,7 @@ npm start
 
 ## 🔗 Live Demo
 
-\[Add your deployed app link here](https://cafe-experience-web-app.vercel.app/)
+[Deployed app link](https://cafe-experience-web-app.vercel.app/)
 
 ---
 
