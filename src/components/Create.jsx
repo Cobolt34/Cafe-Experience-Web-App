@@ -135,14 +135,22 @@ export default function ExperiencePlanner() {
 
       {/* Section 2: Cafe Experience Planner */}
       <section className="max-w-6xl mx-auto bg-white/30 backdrop-blur-xl rounded-3xl shadow-2xl p-8 relative">
-<h2 className="text-3xl font-semibold mb-6 text-gray-800 flex items-center gap-2 relative">
-  🎲 Cafe Experience Planner
-  {/* Floating stickers like combo */}
-  <div className="absolute top-0 right-0 flex gap-4 -translate-y-1/4 translate-x-1/4 opacity-70 pointer-events-none">
-    <img src="/chess.webp" alt="Chess Sticker" className="w-28 h-28" />
-    <img src="/jenga.webp" alt="Jenga Sticker" className="w-28 h-28" />
-  </div>
-</h2>
+        <h2 className="text-3xl font-semibold mb-6 text-gray-800 flex items-center gap-2 relative">
+          🎲 Cafe Experience Planner
+          {/* Floating stickers behind text */}
+          <div className="absolute top-0 right-8 flex gap-4 -translate-y-1/4 opacity-70 pointer-events-none -z-10">
+            <img
+              src="/chess.webp"
+              alt="Chess Sticker"
+              className="w-28 h-28 rotate-[10deg] sm:rotate-[10deg] md:rotate-[0deg]"
+            />
+            <img
+              src="/jenga.webp"
+              alt="Jenga Sticker"
+              className="w-28 h-28 rotate-[-10deg] sm:rotate-[-10deg] md:rotate-[0deg]"
+            />
+          </div>
+        </h2>
 
         <p className="mb-4 text-gray-700">
           Choose the games you'd like to play and preview your table setup:
