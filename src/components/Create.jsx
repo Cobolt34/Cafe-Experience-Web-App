@@ -138,7 +138,10 @@ export default function ExperiencePlanner() {
         <h2 className="text-3xl font-semibold mb-6 text-gray-800 flex items-center gap-2 relative">
           🎲 Cafe Experience Planner
           {/* Floating stickers behind text */}
-          <div className="absolute top-0 right-4 flex gap-4 -translate-y-1/4 opacity-70 pointer-events-none -z-10">
+            <div className="absolute flex gap-4 pointer-events-none -z-10
+                  top-[-1rem] sm:top-[-1.5rem] md:top-[-2rem]
+                  right-2 sm:right-4 md:right-6 lg:right-8
+                  opacity-70">
             <img
               src="/chess.webp"
               alt="Chess Sticker"
