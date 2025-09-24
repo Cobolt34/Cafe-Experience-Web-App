@@ -137,6 +137,12 @@ export default function ExperiencePlanner() {
       <section className="max-w-6xl mx-auto bg-white/30 backdrop-blur-xl rounded-3xl shadow-2xl p-8 relative">
         <h2 className="text-3xl font-semibold mb-6 text-gray-800 flex items-center gap-2">
           🎲 Cafe Experience Planner
+            {/* Floating stickers like combo */}
+            <div className="absolute top-0 right-0 flex gap-4 -translate-y-1/4 translate-x-1/4 opacity-70 pointer-events-none">
+              <img src="/jenga.webp" alt="Jenga Sticker" className="w-28 h-28" />
+              <img src="/chess.webp" alt="Chess Sticker" className="w-28 h-28" />
+            </div>
+          </div>
         </h2>
 
         <p className="mb-4 text-gray-700">
@@ -164,14 +170,6 @@ export default function ExperiencePlanner() {
         </div>
 
         <div className="bg-white/50 backdrop-blur-xl p-6 rounded-2xl shadow-inner min-h-[150px] flex flex-wrap items-center justify-center gap-4 mt-8">
-
-            {/* Stickers for Jenga and Chess */}
-            <div className="absolute top-4 left-4 w-32 h-32">
-            <img src="/jenga.webp" alt="Jenga Sticker" className="w-full h-full" />
-            </div>
-            <div className="absolute top-4 right-4 w-32 h-32">
-            <img src="/chess.webp" alt="Chess Sticker" className="w-full h-full" />
-            </div>
 
           {selectedGames.length === 0 ? (
             <p className="text-gray-600">Select games above to book them for your table.</p>
