@@ -104,7 +104,10 @@ export default function Menu() {
         <img
           src="/coffee.webp"
           alt="Coffee Sticker"
-          className="absolute top-0 right-0 w-32 h-32 -translate-y-1/4 translate-x-1/4 opacity-80 pointer-events-none"
+          className="absolute w-32 h-32 opacity-80 pointer-events-none -z-10
+                     top-[-1rem] sm:top-0 md:top-0
+                     right-2 sm:right-0 md:right-0
+                     -translate-y-1/4 translate-x-1/4"
         />
         <h2 className="text-3xl font-semibold mb-6 tracking-wide text-gray-800">
           ☕ Coffee & Beverages
@@ -142,40 +145,43 @@ export default function Menu() {
         { key: "appetizers", sticker: "/sandwich.webp" },
         { key: "main", sticker: "/pasta.webp" },
         { key: "desserts", sticker: "/waffle.webp" },
-        ].map(({ key, sticker }) => (
+      ].map(({ key, sticker }) => (
         <section
-            key={key}
-            id={key}
-            className="relative mb-16 bg-white/30 backdrop-blur-xl border border-white/40 shadow-2xl rounded-3xl p-8"
+          key={key}
+          id={key}
+          className="relative mb-16 bg-white/30 backdrop-blur-xl border border-white/40 shadow-2xl rounded-3xl p-8"
         >
-            {/* Sticker on the right */}
-            <img
+          {/* Sticker */}
+          <img
             src={sticker}
             alt={`${key} Sticker`}
-            className="absolute top-0 right-0 w-32 h-32 -translate-y-1/4 translate-x-1/4 opacity-80 pointer-events-none"
-            />
+            className="absolute w-32 h-32 opacity-80 pointer-events-none -z-10
+                       top-[-1rem] sm:top-0 md:top-0
+                       right-2 sm:right-0 md:right-0
+                       -translate-y-1/4 translate-x-1/4"
+          />
 
-            <h2 className="text-3xl font-semibold mb-6 capitalize tracking-wide text-gray-800">
+          <h2 className="text-3xl font-semibold mb-6 capitalize tracking-wide text-gray-800">
             {key === "appetizers"
-                ? "🥪 Appetizers"
-                : key === "main"
-                ? "🍲 Main Course"
-                : "🍨 Desserts"}
-            </h2>
+              ? "🥪 Appetizers"
+              : key === "main"
+              ? "🍲 Main Course"
+              : "🍨 Desserts"}
+          </h2>
 
-            <ul className="grid md:grid-cols-2 gap-5">
+          <ul className="grid md:grid-cols-2 gap-5">
             {menuData[key].map((item, idx) => (
-                <li
+              <li
                 key={idx}
                 className="flex justify-between items-center bg-white/60 backdrop-blur-lg p-5 rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
-                >
+              >
                 <span className="text-lg">{item.name}</span>
                 <span className="font-semibold text-gray-800">₹{item.price}</span>
-                </li>
+              </li>
             ))}
-            </ul>
+          </ul>
         </section>
-        ))}
+      ))}
     </div>
   );
 }
