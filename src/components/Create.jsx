@@ -138,9 +138,9 @@ export default function ExperiencePlanner() {
         <h2 className="text-3xl font-semibold mb-6 text-gray-800 flex items-center gap-2 relative">
           🎲 Cafe Experience Planner
           {/* Floating stickers like combo */}
-          <div className="absolute top-0 right-0 flex gap-4 -translate-y-1/4 translate-x-1/4 opacity-70 pointer-events-none">
-            <img src="/jenga.webp" alt="Jenga Sticker" className="w-28 h-28" />
+          <div className="absolute top-0 right-8 flex gap-4 -translate-y-1/4 opacity-70 pointer-events-none">
             <img src="/chess.webp" alt="Chess Sticker" className="w-28 h-28" />
+            <img src="/jenga.webp" alt="Jenga Sticker" className="w-28 h-28" />
           </div>
         </h2>
 
