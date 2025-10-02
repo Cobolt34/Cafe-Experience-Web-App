@@ -90,7 +90,7 @@ public/
 
 1. Clone the repo:
 ```bash
-git clone https://github.com/<your-username>/<project-name>.git
+git clone https://github.com/<my-username>/<project-name>.git
 ````
 
 2. Install dependencies:
