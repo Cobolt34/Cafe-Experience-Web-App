@@ -107,6 +107,7 @@ export default function CafeReservation() {
                     placeholder=" "
                     className={inputClass}
                     required
+                    min='1'
                   />
                   <label className={labelClass}>{field.label}</label>
                 </div>
