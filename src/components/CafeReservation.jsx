@@ -45,7 +45,7 @@ export default function CafeReservation() {
 
   return (
     <div
-      className="min-h-screen flex flex-col font-serif text-gray-900"
+      className="min-h-screen flex flex-col font-serif text-gray-900 relative overflow-hidden"
       style={{
         backgroundImage: 'url("/background.jpeg")',
         backgroundSize: "cover",
@@ -53,44 +53,124 @@ export default function CafeReservation() {
         backgroundAttachment: "fixed",
       }}
     >
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div
+          animate={{ 
+            rotate: 360,
+            scale: [1, 1.1, 1]
+          }}
+          transition={{ 
+            rotate: { duration: 20, repeat: Infinity, ease: "linear" },
+            scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+          }}
+          className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-amber-200/30 to-orange-200/30 rounded-full blur-2xl"
+        />
+        <motion.div
+          animate={{ 
+            rotate: -360,
+            scale: [1.1, 1, 1.1]
+          }}
+          transition={{ 
+            rotate: { duration: 25, repeat: Infinity, ease: "linear" },
+            scale: { duration: 5, repeat: Infinity, ease: "easeInOut" }
+          }}
+          className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-br from-yellow-200/30 to-amber-200/30 rounded-full blur-2xl"
+        />
+      </div>
+
       {/* Header */}
-      <header className="text-center py-12 px-6">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
+      <header className="text-center py-16 px-6 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl font-bold mb-4 drop-shadow-lg tracking-wide"
+          className="mb-6"
         >
-          ☕ The Valley Cafe
-        </motion.h1>
-        <p className="max-w-xl mx-auto text-lg text-gray-700">
-          Book your table online easily and enjoy a warm coffeehouse experience.
-        </p>
+          <motion.div
+            animate={{ 
+              rotate: [0, 5, -5, 0],
+              scale: [1, 1.05, 1]
+            }}
+            transition={{ 
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="inline-block text-6xl mb-4"
+          >
+            ☕
+          </motion.div>
+          <h1 className="text-6xl font-bold mb-6 drop-shadow-2xl tracking-wide bg-gradient-to-r from-amber-800 via-orange-800 to-yellow-800 bg-clip-text text-transparent">
+            The Valley Cafe
+          </h1>
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="max-w-2xl mx-auto"
+        >
+          <p className="text-xl text-gray-700 leading-relaxed mb-4 font-medium">
+            Book your table online easily and enjoy a warm coffeehouse experience.
+          </p>
+          <p className="text-lg text-gray-600">
+            Where every cup tells a story and every bite creates memories ✨
+          </p>
+        </motion.div>
       </header>
           
       {/* Form Section */}
-      <main className="flex justify-center px-6 mb-12">
+      <main className="flex justify-center px-6 mb-12 relative z-10">
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.6 }}
-          className="relative bg-white/20 backdrop-blur-xl shadow-2xl rounded-3xl p-10 w-full max-w-lg border border-white/30"
+          initial={{ opacity: 0, scale: 0.95, y: 30 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          whileHover={{ scale: 1.02, y: -5 }}
+          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+          className="relative bg-white/25 backdrop-blur-2xl shadow-2xl rounded-3xl p-12 w-full max-w-2xl border border-white/40 hover:border-white/60 transition-all duration-500"
         >
-          {/* Stickers */}
-          <img
+          {/* Enhanced Stickers */}
+          <motion.img
             src="/hotcoco.webp"
             alt="Hot Cocoa Sticker"
-            className="absolute top-34 right-5 w-[190px] h-[190px] opacity-80 z-0 animate-bounce-slow"
+            className="absolute top-8 right-8 w-[120px] h-[120px] opacity-70 z-0 pointer-events-none"
+            animate={{ 
+              y: [0, -10, 0],
+              rotate: [0, 5, -5, 0]
+            }}
+            transition={{ 
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
           />
-          <img
+          <motion.img
             src="/pizza.webp"
             alt="Pizza Sticker"
-            className="absolute bottom-8 left-2 w-[180px] h-[180px] opacity-80 z-0 animate-bounce-slow"
+            className="absolute bottom-8 left-8 w-[110px] h-[110px] opacity-70 z-0 pointer-events-none"
+            animate={{ 
+              y: [0, -8, 0],
+              rotate: [0, -3, 3, 0]
+            }}
+            transition={{ 
+              duration: 5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
           />
-          <h2 className="text-2xl font-semibold mb-6 text-center text-gray-900">
-            Reserve Your Table
-          </h2>
+          
+          <motion.h2 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-3xl font-bold mb-8 text-center text-gray-900 relative z-10"
+          >
+            <span className="bg-gradient-to-r from-amber-700 to-orange-700 bg-clip-text text-transparent">
+              Reserve Your Table
+            </span>
+          </motion.h2>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             {[{ name: "name", type: "text", label: "Full Name" },
@@ -169,12 +249,27 @@ export default function CafeReservation() {
             </div>
 
             {/* Submit */}
-            <button
+            <motion.button
               type="submit"
-              className="w-full py-3 rounded-xl bg-gray-800 hover:bg-brown-700 hover:scale-105 hover:shadow-lg transition transform text-lg font-medium text-white"
+              whileHover={{ 
+                scale: 1.05, 
+                y: -2,
+                boxShadow: "0 20px 40px rgba(0,0,0,0.2)"
+              }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-semibold text-lg shadow-xl transition-all duration-300 relative overflow-hidden group"
             >
-              Book Now
-            </button>
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                Book Now
+                <motion.span
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  ✨
+                </motion.span>
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></div>
+            </motion.button>
           </form>
         </motion.div>
       </main>
@@ -219,10 +314,7 @@ export default function CafeReservation() {
         )}
       </AnimatePresence>
 
-      {/* Footer */}
-      <footer className="text-center py-6 text-black-900 text-sm">
-        © 2025 Made by Sagarika. All rights reserved.
-      </footer>
+
     </div>
   );
 }
