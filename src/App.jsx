@@ -6,6 +6,7 @@ import ViewMenu from "./components/ViewMenu";
 import Menu from "./pages/Menu";
 import About from "./components/About";
 import Cart from "./components/Create";
+import Footer from "./components/Footer";
 import Layout from "../Layout"; 
 
 // Temporary placeholder About & Cart pages
@@ -43,6 +44,9 @@ export default function App() {
         {/* Cart Page */}
         <Route path="/cart" element={<Cart />} />
       </Routes>
+      
+      {/* Footer */}
+      <Footer />
       </Layout>
     </Router>
   );
