@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const menuData = {
   coffee: {
@@ -92,9 +93,14 @@ export default function Menu() {
         backgroundAttachment: "fixed",
       }}
     >
-      <h1 className="text-5xl font-bold text-center mb-14 drop-shadow-lg">
+      <motion.h1 
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-6xl font-bold text-center mb-16 drop-shadow-2xl bg-gradient-to-r from-amber-800 via-orange-800 to-yellow-800 bg-clip-text text-transparent"
+      >
         Our Menu
-      </h1>
+      </motion.h1>
 
       {/* Coffee Section */}
       <section
