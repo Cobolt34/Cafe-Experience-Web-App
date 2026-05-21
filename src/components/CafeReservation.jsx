@@ -38,10 +38,10 @@ export default function CafeReservation() {
   };
 
   const inputClass =
-    "w-full px-4 pt-6 pb-3 rounded-xl bg-white/25 border border-white/30 placeholder-transparent focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-60 text-gray-900 peer backdrop-blur-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-102 focus:scale-105 focus:shadow-lg";
+  "w-full px-4 pt-6 pb-3 rounded-xl bg-white/80 border border-gray-300/80 placeholder-transparent focus:outline-none focus:ring-2 focus:ring-amber-400 text-gray-900 peer shadow-sm transition-all duration-300 hover:shadow-md";
 
   const labelClass =
-    "absolute left-4 top-3 text-gray-600 text-sm transition-all duration-300 ease-in-out peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-focus:top-3 peer-focus:text-sm peer-focus:text-gray-800";
+  "absolute left-4 top-3 text-gray-700 text-sm transition-all duration-300 ease-in-out peer-placeholder-shown:top-6 peer-placeholder-shown:text-base peer-focus:top-3 peer-focus:text-sm peer-focus:text-amber-700";
 
   return (
     <div
@@ -75,7 +75,7 @@ export default function CafeReservation() {
           animate={{ opacity: 1, scale: 1 }}
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.6 }}
-          className="relative bg-white/20 backdrop-blur-xl shadow-2xl rounded-3xl p-10 w-full max-w-lg border border-white/30"
+          className="relative bg-white/60 backdrop-blur-2xl shadow-2xl rounded-3xl p-10 w-full max-w-lg border border-gray-300/70"
         >
           {/* Stickers */}
           <img
