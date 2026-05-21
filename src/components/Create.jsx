@@ -62,12 +62,22 @@ export default function ExperiencePlanner() {
         backgroundAttachment: "fixed",
       }}
     >
-      <h1 className="text-5xl font-bold text-center mb-12 drop-shadow-lg">
+      <motion.h1
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-6xl font-bold text-center mb-16 drop-shadow-2xl bg-gradient-to-r from-amber-800 via-orange-800 to-yellow-800 bg-clip-text text-transparent"
+      >
         Build Your Cafe Experience
-      </h1>
+      </motion.h1>
 
       {/* Section 1: Create Your Own Combo */}
-      <section className="mb-16 max-w-6xl mx-auto bg-white/30 backdrop-blur-xl rounded-3xl shadow-2xl p-8">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="mb-20 max-w-7xl mx-auto bg-white/35 backdrop-blur-2xl rounded-3xl shadow-2xl p-10 border border-white/50 hover:border-white/70 transition-all duration-500"
+      >
         <h2 className="text-3xl font-semibold mb-6 text-gray-800 flex items-center gap-2">
           🎨 Create Your Own Combo
         </h2>
@@ -131,14 +141,19 @@ export default function ExperiencePlanner() {
             Total: ₹{totalPrice}
           </p>
         </div>
-      </section>
+      </motion.section>
 
       {/* Section 2: Cafe Experience Planner */}
-      <section className="max-w-6xl mx-auto bg-white/30 backdrop-blur-xl rounded-3xl shadow-2xl p-8 relative">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="max-w-7xl mx-auto bg-white/35 backdrop-blur-2xl rounded-3xl shadow-2xl p-10 relative border border-white/50 hover:border-white/70 transition-all duration-500"
+      >
         <h2 className="text-3xl font-semibold mb-6 text-gray-800 flex items-center gap-2 relative">
           🎲 Cafe Experience Planner
           {/* Floating stickers behind text */}
-            <div className="absolute flex gap-4 pointer-events-none -z-10
+          <div className="absolute flex gap-4 pointer-events-none -z-10
                   top-[-1rem] sm:top-[-1.5rem] md:top-[-2rem]
                   right-2 sm:right-4 md:right-6 lg:right-8
                   opacity-70">
@@ -167,11 +182,10 @@ export default function ExperiencePlanner() {
               whileTap={{ scale: 0.9 }}
               animate={{ scale: selectedGames.includes(game.name) ? 1.1 : 1 }}
               transition={{ type: "spring", stiffness: 500, damping: 20 }}
-              className={`flex items-center gap-2 px-4 py-2 rounded-2xl shadow-md transition ${
-                selectedGames.includes(game.name)
+              className={`flex items-center gap-2 px-4 py-2 rounded-2xl shadow-md transition ${selectedGames.includes(game.name)
                   ? "bg-green-200"
                   : "bg-white/70 hover:scale-[1.03] backdrop-blur-lg"
-              }`}
+                }`}
             >
               {game.icon}
               <span>{game.name}</span>
@@ -198,7 +212,7 @@ export default function ExperiencePlanner() {
             ))
           )}
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 }

@@ -4,16 +4,95 @@
 
 body {
   @apply font-serif bg-cover bg-center bg-fixed;
-  background-image: url("/background.jpg"); /* Place background.jpeg in public folder */
+  background-image: url("/background.jpg");
+  /* Place background.jpeg in public folder */
 }
 
 @keyframes bounce-slow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+
+  66% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+}
+
+@keyframes glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(251, 191, 36, 0.6);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 .animate-bounce-slow {
   animation: bounce-slow 4s infinite ease-in-out;
+}
+
+.animate-float {
+  animation: float 6s infinite ease-in-out;
+}
+
+.animate-glow {
+  animation: glow 3s infinite ease-in-out;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #f59e0b, #ea580c);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #d97706, #dc2626);
 }
 
 /* Ensure proper scaling on all devices */
@@ -29,7 +108,8 @@ body {
   width: 100%;
   font-family: 'Inter', sans-serif;
   background-color: #fafafa;
-  overflow-x: hidden; /* prevent horizontal scroll */
+  overflow-x: hidden;
+  /* prevent horizontal scroll */
 }
 
 /* Make images and stickers responsive */
@@ -40,13 +120,21 @@ img {
 }
 
 /* Responsive text scaling */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   word-wrap: break-word;
   line-height: 1.2;
 }
 
 /* Make form inputs fit small screens */
-input, button, select, textarea {
+input,
+button,
+select,
+textarea {
   max-width: 100%;
   font-size: 1rem;
   padding: 0.5rem;
@@ -79,4 +167,3 @@ input, button, select, textarea {
     padding: 1rem !important;
   }
 }
-

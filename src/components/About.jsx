@@ -26,12 +26,23 @@ export default function About() {
       }}
     >
       {/* Page Title */}
-      <h1 className="text-5xl font-bold text-center mb-14 drop-shadow-lg">
+      <motion.h1 
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-6xl font-bold text-center mb-16 drop-shadow-2xl bg-gradient-to-r from-amber-800 via-orange-800 to-yellow-800 bg-clip-text text-transparent"
+      >
         About Us
-      </h1>
+      </motion.h1>
 
       {/* About Section */}
-      <section className="mb-16 bg-white/30 backdrop-blur-xl border border-white/40 shadow-2xl rounded-3xl p-8 max-w-4xl mx-auto hover:scale-105 transition-transform duration-300">
+      <motion.section 
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        whileHover={{ scale: 1.02, y: -5 }}
+        className="mb-20 bg-white/35 backdrop-blur-2xl border border-white/50 shadow-2xl rounded-3xl p-10 max-w-5xl mx-auto transition-all duration-500 hover:border-white/70"
+      >
         <h2 className="text-3xl font-semibold mb-6 text-gray-800">
           ☕ Our Story
         </h2>
@@ -41,26 +52,41 @@ export default function About() {
           and a peaceful ambiance that makes every visit feel like a little escape. <br></br>
           Our cafe is crafted to bring comfort, flavor, and joy in every bite.
         </p>
-      </section>
+      </motion.section>
 
       {/* Cafe Pictures */}
-      <section className="mb-16 max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
-        <img
-          src="/cafe1.jpg"
-          alt="Cafe Interior 1"
-          className="rounded-3xl shadow-lg hover:scale-105 transition-transform duration-300"
-        />
-        <img
-          src="/cafe2.jpg"
-          alt="Cafe Interior 2"
-          className="rounded-3xl shadow-lg hover:scale-105 transition-transform duration-300"
-        />
-        <img
-          src="/cafe3.jpg"
-          alt="Cafe Interior 3"
-          className="rounded-3xl shadow-lg hover:scale-105 transition-transform duration-300"
-        />
-      </section>
+      <motion.section 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="mb-20 max-w-7xl mx-auto grid md:grid-cols-3 gap-8"
+      >
+        {["/cafe1.jpg", "/cafe2.jpg", "/cafe3.jpg"].map((src, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 + index * 0.2 }}
+            whileHover={{ 
+              scale: 1.05, 
+              y: -10,
+              rotateY: 5,
+              rotateX: 5
+            }}
+            className="group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500"
+          >
+            <img
+              src={src}
+              alt={`Cafe Interior ${index + 1}`}
+              className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute bottom-4 left-4 text-white font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              Interior View {index + 1}
+            </div>
+          </motion.div>
+        ))}
+      </motion.section>
 
       {/* Open Hours, Address & Contact */}
       <section className="max-w-4xl mx-auto bg-white/30 backdrop-blur-xl border border-white/40 shadow-2xl rounded-3xl p-8 space-y-6">
